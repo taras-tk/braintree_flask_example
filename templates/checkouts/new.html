@@ -42,7 +42,15 @@
     container: '#bt-dropin',
     paypal: {
       flow: 'vault'
-    }
+    },
+    venmo: true,
+    googlePay: {
+      transactionInfo: {
+        currencyCode: 'USD',
+        countryCode: 'US',
+        totalPriceStatus: 'FINAL'
+      }
+    },
   }, function (createErr, instance) {
     form.addEventListener('submit', function (event) {
       event.preventDefault();
